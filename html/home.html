@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>What to Binge-Watch - Home</title>
+	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="../javascript/javascript.js" text="text/javascript"></script>
+</head>
+<body>
+	<div id="tfheader">
+			<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Search TV Shows"><input type="submit" value=">" class="tfbutton2">
+			</form>
+			<div class="tfclear"></div>
+		</div>
+	<div class="container">
+	<div class="header-wrapper">
+			<div class="title">
+				<p class="header-title">What to Binge-Watch</p>
+			</div>
+		</div>
+		<div class="intro-wrapper">
+			<div class="intro">
+				<p class="intro-text"> Discover What to Watch By Clicking On A Genre Below: </p>
+			</div>	
+		</div>
+		<div class="genre-wrapper">
+			<div class="genre-buttons">
+				<button id="drama" class="home" onclick="showModalDrama()">Drama</button>
+				<button id="comedy" class="home" onclick="showModalComedy()">Comedy</button>
+				<button id="reality" class="home" onclick="showModalReality()">Reality</button>
+			</div>
+		</div>
+		<div class="modal-wrapper-comedy">
+			<div class="modal-comedy">
+				<button class="close" onclick="hideModalComedy()">X</button>
+				<p class="modal-intro-text">Select A Comedy Sub-Genre Below:</p>
+				<button id="animated" class="sub">Animated</button>
+				<button id="sitcom" class="sub">Sitcom</button>
+				<button id= "dark_comedy" class="sub">Dark Comedy</button>
+				<button id="dramedy" class="sub">Dramedy</button>
+				<button id="satire" class="sub">Satire</button>
+				<button id="talk" class="sub">Variety/Talk Show</button>
+				<p><a class="back" onclick="hideModalComedy()">Back to Home</a></p>
+			</div>
+		</div>
+		<div class="modal-wrapper-drama">
+			<div class="modal-drama">
+				<button class="close" onclick="hideModalDrama()">X</button>
+				<p class="modal-intro-text">Select A Drama Sub-Genre Below:</p>
+				<button id="action" class="sub"><a href="action-adventure.html">Action/Adventure</a></button>
+				<button id="fantasy" class="sub">Sci-Fi/Fantasy</button>
+				<button id="law" class="sub">Law/Politics</button>
+				<button id="antho" class="sub">Anthology</button>
+				<button id="pdrama" class="sub">Period Drama</button>
+				<button id="mystery" class="sub">Mystery/Thriller</button>
+				<p><a class="back" onclick="hideModalDrama()">Back to Home</a></p>
+			</div>
+		</div>
+		<div class="modal-wrapper-reality">
+			<div class="modal-reality">
+				<button class="close" onclick="hideModalReality()">X</button>
+				<p class="modal-intro-text">Select A Reality Sub-Genre Below:</p>
+				<button id="comp" class="sub">Competition</button>
+				<button id="docdram" class="sub">Docudrama</button>
+				<button id="cook" class="sub">Cooking</button>
+				<button id="fashion" class="sub">Fashion</button>
+				<button id="dating" class="sub">Dating/Romance</button>
+				<button id="edu" class="sub">Educational</button>
+				<p><a class="back" onclick="hideModalReality()">Back to Home</a></p>
+			</div>
+		</div>		
+		<div class="footer-wrapper">
+			<footer>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li class="copyright">Copyright 2014 || What to Binge-Watch</li>
+				</ul>
+			</footer>
+		</div>
+	</div>	
+</body>
+</html>
