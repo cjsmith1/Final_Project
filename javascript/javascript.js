@@ -47,7 +47,26 @@ $(document).ready(function() {
 			$(".gallimage").css("boxShadow","0 0 15px #545150");
 			$(".arrow").css("border", "");
 			$(".more-info-wrapper").fadeIn();
-		});
+
+			});
+
+var title= '24'
+	$.ajax (
+		{
+			url: "http://www.omdbapi.com/?t="+ title,
+			dataType: "jsonp"}).done(
+			function(data){
+				$('#more-info-24 .infotitle').append('<p>', data.Title);
+				$('#more-info-24 .plot').append('<p>', data.Plot);
+				$('#more-info-24 .year').append('<p>', data.Year);
+				$('#more-info-24 .imdbrating').append('<p>', data.imdbRating);
+				$('#more-info-24 .runtime').append('<p>', data.Runtime);
+				$('#more-info-24 .actors').append('<p>', data.Actors);
+				$('#more-info-24 .rating').append('<p>', data.Rated);
+				$('#more-info-24 .premiere').append('<p>', data.Released);
+
+			});				
+
 
 	$(".arrow").click(function() {
 		$(".gallimage").css("boxShadow", "");
@@ -69,6 +88,6 @@ $(document).ready(function() {
 		$(".gallimage").eq(currentImageIndex).hide();
 			currentImageIndex = (currentImageIndex - 1) % numImages;
 			$(".gallimage").eq(currentImageIndex).show();
-	})		
-
+	});
+		
 });	
